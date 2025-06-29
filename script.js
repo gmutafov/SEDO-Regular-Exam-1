@@ -1,3 +1,4 @@
+
 // Helper to set box color
 function setBoxColor(color) {
   document.getElementById('box').style.backgroundColor = color;
@@ -18,3 +19,10 @@ function randomHex() {
 document.getElementById('random-btn').addEventListener('click', function() {
   var color = randomHex();
   setBoxColor(color);
+
+// Initial: read text input and apply to box
+document.getElementById('apply-btn').addEventListener('click', function() {
+  var color = document.getElementById('color-input').value;
+  document.getElementById('box').style.backgroundColor = color;
+});
+
